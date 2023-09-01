@@ -19,7 +19,7 @@ public class hw2 {
 
 
 
-            for (int i = 2; i < 100; i++){
+            for (int i = 2; i < 1001; i++){
                 boolean num = false;
                 for(int j = 2; i * i < j; j++){
                     num = (j % i == 0);
