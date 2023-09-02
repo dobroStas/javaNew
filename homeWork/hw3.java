@@ -42,7 +42,7 @@ public class hw3 {
       }
       System.out.print("\nThe result is given as follows:\n");
       System.out.printf(n + " " + op + " " + m + " = " + operator);    
-
+      sc.close();
     }
 }
     

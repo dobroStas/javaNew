@@ -1,5 +1,6 @@
 package seminars;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class sem1 {
@@ -10,18 +11,17 @@ public class sem1 {
         // System.out.println(text);
 
 
-        // Scanner input = new Scanner(System.in);
-        // System.out.println("enter U name:");            //age
-        // int age = input.nextInt();
+        
+        int age = 6;
 
-        // if (age >= 18)
-        //     System.out.println("hallo");
+
+        if ((age >= 18) & (age < 50))
+            System.out.println("hallo");
         
-        // else if (age >= 10);
-        //     System.out.println("dsd");
-        
-        // else 
-        //     System.out.println("1212");
+        if (age <= 10) 
+            System.out.println("dsd");
+        if (age >= 50)
+         System.out.println("1212");
         
 
         // спросить имя
@@ -54,29 +54,49 @@ public class sem1 {
         // Если в массиве есть числа, равные заданному, нужно перенести эти элементы в конец массива.
         // Таким образом, первые несколько (или все) элементов массива должны быть отличны от заданного,
         // а остальные - равны ему.
-        int [] array = new int[]{2,4,4,6,2,3,4,5};
-        Scanner input = new Scanner(System.in);
-        // System.out.println("enter U num:");           
-        int num = 4;
-        int []new_arr = new int[array.length];
+
+
+
+        // int [] array = new int[]{2,4,4,6,2,3,4,5};
+        // Scanner input = new Scanner(System.in);
+        // // System.out.println("enter U num:");           
+        // int num = 4;
+        // int []new_arr = new int[array.length];
+        // int count = 0;
+        // int index = 0;
+        // for (int i = 0; i < array.length; i++) {
+        //     int temp = array[i];
+        //     if(array[i] == num) count++;
+        //     else{
+        //         new_arr[index] = array[i];
+        //         index++;
+        //     }
+        //     for (int j = 0; j < count; j++) {
+        //         new_arr[index  + j] = num;
+        //     }
+        // }
+
+
+        // for(int i = 0; i < new_arr.length; i++){
+        //     System.out.print(new_arr[i]);
+        // }
+
+
+
+        int[] nums = {3, 3, 3, 2, 1, 7, 3};
+        int value = 2;
         int count = 0;
-        int index = 0;
-        for (int i = 0; i < array.length; i++) {
-            int temp = array[i];
-            if(array[i] == num) count++;
-            else{
-                new_arr[index] = array[i];
-                index++;
+        while (count < nums.length) {           //цикл крутит все згачения каждый раз по кругу пока не закончится дляна массива
+            for (int i = 0; i < nums.length - 1; i++) {
+                if (nums[i] == value) {
+                    int temp = nums[i];
+                    nums[i] = nums[i + 1];
+                    nums[i + 1] = temp;
+                }
             }
-            for (int j = 0; j < count; j++) {
-                new_arr[index  + j] = num;
-            }
+            count++;
         }
-
-
-        for(int i = 0; i < new_arr.length; i++){
-            System.out.print(new_arr[i]);
-        }
+        System.out.println(Arrays.toString(nums));
 
 
     }

@@ -12,15 +12,21 @@ N-ое треугольное число
 n = 4 -> 10
 n = 5 -> 15
 */
+triangularТumber();
 
-Scanner sc = new Scanner(System.in);
-System.out.println("enter 'n': ");
-int n = sc.nextInt();
-int res = 0;
-for (int i = 0; i <= n; i++) {
-    if(n > 0) res += i;
-    else System.out.println("n > 0 only. try again");
-}
-System.out.println(res);
     }
+
+static void triangularТumber(){
+    Scanner sc = new Scanner(System.in);
+    System.out.println("enter 'n': ");
+    int n = sc.nextInt();
+    int res = 0;
+    for (int i = 0; i <= n; i++) {
+        if(n > 0) res += i;
+        else System.out.println("n > 0 only. try again");
+    }
+    System.out.println(res);
+    sc.close();
+    }
+
 }

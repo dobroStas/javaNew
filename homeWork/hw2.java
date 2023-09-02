@@ -17,16 +17,21 @@ public class hw2 {
             ...
             */
 
+        primeNumber();
+    }
 
+    static void primeNumber(){
+        int upperValue = 1000;
 
-            for (int i = 2; i < 1001; i++){
+        for (int i = 2; i < upperValue + 1; i++){
                 boolean num = false;
                 for(int j = 2; i * i < j; j++){
                     num = (j % i == 0);
                     if(num) break;
                     if(!num) System.out.println(j);
                 }
-            }
+        }
+    }
             /*
              * перебор чисел от 2 до ста
              * переменная ложь
@@ -36,8 +41,6 @@ public class hw2 {
              * если да, то брейк
              * если нет, значит простое
              */
-
-    }
 }
 
 
