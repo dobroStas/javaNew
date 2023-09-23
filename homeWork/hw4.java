@@ -1,6 +1,6 @@
 
 package homeWork;
-
+import static printArr;
 public class hw4 {
     public static void main(String[] args) {
         // Во фразе "Добро пожаловать на курс по Java" переставить слова в обратном порядке.
@@ -15,5 +15,6 @@ public class hw4 {
         for(int i = 0; i < words.length; i++){
             System.out.print(words[i] + " ");
         }
+        printArr(words);
     }
 }

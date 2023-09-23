@@ -21,8 +21,8 @@ public class hw2 {
     }
 
     static void primeNumber(){
-        int upperValue = 1000;
-
+        int upperValue = 100;
+        System.out.println("1");
         for (int i = 2; i < upperValue + 1; i++){
                 boolean num = false;
                 for(int j = 2; i * i < j; j++){

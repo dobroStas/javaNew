@@ -15,13 +15,9 @@ public class sem1 {
         int age = 6;
 
 
-        if ((age >= 18) & (age < 50))
-            System.out.println("hallo");
-        
-        if (age <= 10) 
-            System.out.println("dsd");
-        if (age >= 50)
-         System.out.println("1212");
+        if ((age >= 18) & (age < 50)) System.out.println("hallo");
+        else if (age <= 10) System.out.println("dsd");
+        else if (age >= 50) System.out.println("1212");
         
 
         // спросить имя

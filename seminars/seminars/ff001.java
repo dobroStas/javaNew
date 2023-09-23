@@ -26,17 +26,7 @@ package seminars;
 //     }
 // }
 
-// 20:29
-// Айнур Шамсуллин
-// i < 5
 
-// 20:31
-// Иванченко Григорий
-// а можно ли написать ++i и если да, то что тогда будет?
-
-// 20:31
-// Роман Сухачев
-// import java.util.Scanner;
 
 // public class Main {
 //     public static void main(String[] args) {
@@ -60,10 +50,6 @@ package seminars;
 //     }
     
 // }
-
-
-
-
     // }}
 
 
@@ -78,6 +64,52 @@ package seminars;
     //     var array = new int[] {3, 2, 2, 3, 4,35,3,24,234,4,23,52,2,2,3,3,5,6565,3,55,3};
     //     var val = 3;
 
+    import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
+public class ff001 {
+
+    public static void main(String[] args) {
+        List<Entry> entries = List.of(
+                new Entry("Анна", "12345"),
+                new Entry("Анна", "67890"),
+                new Entry("Борис", "11111"),
+                new Entry("Анна", "54321"),
+                new Entry("Дмитрий", "99999"),
+                new Entry("Борис", "22222"),
+                new Entry("Виктор", "33333")
+        );
+
+        System.out.println(getSortedPhoneBook(entries));
+    }
+
+    public static List<Map.Entry<String, Set<String>>> getSortedPhoneBook(List<Entry> entries) {
+        Map<String, Set<String>> phoneBookMap = new HashMap<>();
+
+        for (Entry entry : entries) {
+            phoneBookMap.computeIfAbsent(entry.name, k -> new HashSet<>()).add(entry.phone);
+        }
+
+        List<Map.Entry<String, Set<String>>> phoneBookList = new ArrayList<>(phoneBookMap.entrySet());
+        phoneBookList.sort((e1, e2) -> Integer.compare(e2.getValue().size(), e1.getValue().size()));
+
+        return phoneBookList;
+    }
+
+    static class Entry {
+        String name;
+        String phone;
+
+        Entry(String name, String phone) {
+            this.name = name;
+            this.phone = phone;
+        }
+    }
+}
     //     boolean swap = true;
     //     while (swap)
     //     {
@@ -100,16 +132,6 @@ package seminars;
  * и добавление колличества подходящих с нужного индекса
  * не получилось через "push"!!!!
  */
-
-// 21:47
-
-
-
-
-
-
-
-
 
 
 // Четвертое задание:

@@ -1,3 +1,4 @@
+package homeWork;
 
 
 
@@ -12,5 +13,8 @@ public class func {
         }
     }
     
+     static void split(String frase){
+        String[] words = frase.split(" ");
+     }
     
 }
